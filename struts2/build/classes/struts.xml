@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 声明文件提交后缀 --><constant name="struts.i18n.encoding" value="UTF-8"/>
+	<constant name="struts.action.extension" value="php,asp,do,action" />
+	
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="com" class="struts.news.action.NewsAction">
+		<result name="newslist">/news.jsp</result>
+		<result name="update">/newsupdate.jsp</result>
+		</action>
+	
+	<!-- book+*表示提交地址后的！ {1}加占位符 -->
+	<action name="book*" method="{1}" class="">
+			<result name=""></result>
+	</action>
+	</package>
+</struts>
